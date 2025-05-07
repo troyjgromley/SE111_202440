@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pay Calculator</title>
+</head>
+<body>
+  <script>
+    // Prompt user for input
+    let hourlyRate = parseFloat(prompt("Enter your hourly pay rate:"));
+    let hoursWorked = parseFloat(prompt("Enter total hours worked over two weeks:"));
+
+    // Calculate gross pay, tax, and net pay
+    let grossPay = hourlyRate * hoursWorked;
+    let tax = grossPay * 0.20;
+    let netPay = grossPay - tax;
+
+    // Round to 2 decimal places
+    grossPay = grossPay.toFixed(2);
+    tax = tax.toFixed(2);
+    netPay = netPay.toFixed(2);
+
+    // Format the output message
+    let message = `Gross Pay: $${grossPay}\nUncle Sam's Share (Tax): $${tax}\nYour Net Pay: $${netPay}`;
+
+    // Display results
+    alert(message);
+    console.log(message);
+  </script>
+</body>
+</html>
